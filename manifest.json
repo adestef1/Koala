@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "Koala Fun Time",
+  "version": "1.0",
+  "description": "Fun Koala Time Yo",
+
+  // "chrome_url_overrides" : {
+  //   "newtab": "index.css"
+  // },
+
+  "permissions": [
+    "tabs"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["https://www.google.com/*"],
+      "css": ["index.css"]
+    }
+  ],
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html",
+    "default_title": "Koala Fun!"
+  }
+}
